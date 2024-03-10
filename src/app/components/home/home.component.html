@@ -1,6 +1,16 @@
 <div id="publication-container">
   @for (item of mediaData; track $index) {
-  <div class="div">
+  <div class="publication">
+    <div class="info-anim">
+      <div class="info-top">
+        <p>Profil</p>
+        <button>Enregistrer</button>
+      </div>
+      <div class="info-bottom">
+        <i class="fa-solid fa-download"></i>
+        <i class="fa-solid fa-circle-info"></i>
+      </div>
+    </div>
     <img [src]="item.picture" alt="" class="publication-img" />
   </div>
   }

@@ -3,9 +3,70 @@
   column-gap: 1em;
   margin: 5px;
 
-  .div {
+  .publication {
     margin: 0 0 1em;
     break-inside: avoid;
+    position: relative;
+    cursor: zoom-in;
+
+    .info-anim {
+      position: absolute;
+      top: 0;
+      right: 5px;
+      bottom: 10px;
+      left: 0;
+      opacity: 0;
+      transition: opacity 0.5s;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      .info-top {
+        display: flex;
+        justify-content: space-between;
+        gap: 50px;
+        margin: 10px;
+
+        p {
+          margin-left: 15px;
+          color: white;
+          font-weight: 500;
+        }
+
+        button {
+          padding: 10px 10px;
+          background-color: red;
+          color: white;
+          border: none;
+          border-radius: 40px;
+          font-weight: 500;
+        }
+      }
+
+      .info-bottom {
+        display: flex;
+        gap: 5px;
+        justify-content: flex-end;
+
+        .fa-solid.fa-download {
+          background-color: white;
+          padding: 8px;
+          border-radius: 50%;
+          font-size: 18px;
+        }
+
+        .fa-solid.fa-circle-info {
+          background-color: white;
+          padding: 8px;
+          border-radius: 50%;
+          font-size: 18px;
+        }
+      }
+    }
     .publication-img {
       width: 100%;
       margin: 5px;
