@@ -1,0 +1,121 @@
+#container-header {
+  position: sticky;
+
+  .header {
+    display: flex;
+    position: sticky;
+    top: 5px;
+    margin: 15px;
+    align-items: center;
+
+    .logo {
+      padding: 10px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+
+      &:hover {
+        background-color: rgb(237, 237, 227);
+      }
+
+      #pinterest-icon-color {
+        font-size: 24px;
+        color: red;
+      }
+    }
+
+    .container-button {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      .button-accueil {
+        button {
+          border: none;
+          color: white;
+          background-color: black;
+          padding: 15px 20px;
+          border-radius: 50px;
+          font-size: 15px;
+          font-weight: bold;
+        }
+      }
+
+      .button-add {
+        button {
+          border: none;
+          color: black;
+          background-color: white;
+          padding: 15px 20px;
+          border-radius: 50px;
+          font-size: 15px;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .header-input-search {
+      display: flex;
+      align-items: center;
+
+      .fa-solid.fa-magnifying-glass {
+        font-size: 1.5em;
+        color: #999;
+        margin-right: 10px;
+        padding: 15px;
+        position: absolute;
+      }
+
+      input[id="search-input"] {
+        padding: 15px;
+        border: none;
+        background-color: rgb(224, 224, 215);
+        border-radius: 50px;
+        width: 140vh;
+        padding-left: 55px;
+      }
+    }
+  }
+
+  .icon-container {
+    display: flex;
+    gap: 15px;
+
+    :first-child {
+      margin-left: 5px;
+      padding: 15px;
+      font-size: 20px;
+      &:hover {
+        border-radius: 50%;
+        background-color: rgb(237, 237, 227);
+      }
+    }
+
+    :nth-child(2) {
+      margin-left: 5px;
+      padding: 15px;
+      font-size: 20px;
+      &:hover {
+        border-radius: 50%;
+        background-color: rgb(237, 237, 227);
+      }
+    }
+    :nth-child(3) {
+      padding: 15px;
+      font-size: 18px;
+      &:hover {
+        border-radius: 50%;
+        background-color: rgb(237, 237, 227);
+      }
+    }
+
+    :last-child {
+      padding: 15px;
+      font-size: 18px;
+      &:hover {
+        border-radius: 50%;
+        background-color: rgb(237, 237, 227);
+      }
+    }
+  }
+}

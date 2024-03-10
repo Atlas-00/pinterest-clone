@@ -1,0 +1,17 @@
+#publication-container {
+  column-count: 6;
+  column-gap: 1em;
+  margin: 5px;
+
+  .div {
+    margin: 0 0 1em;
+    break-inside: avoid;
+    .publication-img {
+      width: 100%;
+      margin: 5px;
+      height: auto;
+      display: block;
+      border-radius: 20px;
+    }
+  }
+}
