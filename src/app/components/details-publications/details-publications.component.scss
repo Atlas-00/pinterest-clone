@@ -1,0 +1,49 @@
+#detail-publication {
+  margin-top: 80px;
+  display: flex;
+  width: 100vh;
+
+  .back-icon {
+    i.fa-solid {
+      /* Styles for the arrow icon */
+    }
+    p {
+      /* Styles for the "Pour vous" text */
+    }
+  }
+
+  .publication-img {
+    img {
+      /* Styles for the publication image */
+      height: auto;
+      width: 400px;
+    }
+  }
+
+  .publication-commentaire {
+    .info-publication {
+      display: flex;
+
+      .info-publication-icon {
+        i.fa-solid {
+          /* Styles for the download and info icons */
+        }
+      }
+
+      .info-publication-text {
+        p {
+          /* Styles for the "Profil" text */
+        }
+        button {
+          /* Styles for the "Enregistrer" button */
+        }
+      }
+    }
+
+    .commentaire-section {
+      p {
+        /* Styles for the comment section text */
+      }
+    }
+  }
+}

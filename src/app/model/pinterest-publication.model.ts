@@ -1,4 +1,4 @@
-type PiterestPublication = {
+export type TypePiterestPublication = {
   id: number;
   picture: string;
   author: {
@@ -7,7 +7,7 @@ type PiterestPublication = {
   };
 };
 
-export const PiterestPublication: PiterestPublication[] = [
+export const PiterestPublication: TypePiterestPublication[] = [
   {
     id: 0,
     picture:
@@ -165,6 +165,15 @@ export const PiterestPublication: PiterestPublication[] = [
     id: 17,
     picture:
       'https://i.pinimg.com/736x/4a/33/d7/4a33d7a6687c8a9293e7a449f0f0df5b.jpg',
+    author: {
+      name: 'Atlas',
+      numberFolower: 999,
+    },
+  },
+  {
+    id: 18,
+    picture:
+      'https://i.pinimg.com/736x/d3/20/39/d32039d300f0f52c348f71cf052f901d.jpg',
     author: {
       name: 'Atlas',
       numberFolower: 999,

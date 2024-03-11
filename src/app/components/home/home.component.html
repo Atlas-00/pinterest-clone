@@ -1,6 +1,6 @@
 <div id="publication-container">
   @for (item of mediaData; track $index) {
-  <div class="publication">
+  <div class="publication" (click)="getDetails(item.id)">
     <div class="info-anim">
       <div class="info-top">
         <p>Profil</p>

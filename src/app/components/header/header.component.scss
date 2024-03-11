@@ -1,11 +1,13 @@
 #container-header {
-  position: sticky;
+  position: fixed;
+  z-index: 2;
+  background-color: white;
+  top: 0;
 
   .header {
     display: flex;
-    position: sticky;
-    top: 5px;
-    margin: 15px;
+    margin: 10px;
+    padding-right: 10px;
     align-items: center;
 
     .logo {

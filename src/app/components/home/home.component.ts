@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Router } from '@angular/router';
 import { PiterestPublication } from '../../model/pinterest-publication.model';
-
 
 @Component({
   selector: 'app-home',
@@ -11,4 +11,10 @@ import { PiterestPublication } from '../../model/pinterest-publication.model';
 })
 export class HomeComponent {
   mediaData = [...PiterestPublication];
+
+  router = inject(Router);
+
+  getDetails(idPublication: number) {
+    this.router.navigate(['detail-publication', idPublication]);
+  }
 }
