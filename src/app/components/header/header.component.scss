@@ -40,6 +40,10 @@
           border-radius: 50px;
           font-size: 15px;
           font-weight: bold;
+
+          &:hover {
+            cursor: pointer;
+          }
         }
       }
 
@@ -52,6 +56,10 @@
           border-radius: 50px;
           font-size: 15px;
           font-weight: bold;
+
+          &:hover {
+            cursor: pointer;
+          }
         }
       }
     }
