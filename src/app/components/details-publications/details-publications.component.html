@@ -1,57 +1,56 @@
-<div id="container-detail-publication">
-  <div class="detail-publication-img">
+<div id="detail-container">
+  <div class="detail-img">
     <img [src]="publication.picture" alt="" />
   </div>
 
-  <div class="detail-section-commentaire">
-    <div class="header-commentaire">
+  <div class="detail-commentaire">
+    <div class="commentaire-header">
       <div class="header-icon">
         <i class="fa-solid fa-download"></i>
         <i class="fa-solid fa-circle-info"></i>
       </div>
-      <div class="header-button">
+
+      <div class="commentaire-button">
         <button>Profil</button>
         <button>Enregistrer</button>
       </div>
     </div>
 
-    <div class="publication-title">
-      @if (publication.title) {
-      <h2>{{ publication.title }}</h2>
-      } @else {
+    <div class="commentaire-body">
+      <div class="body-title">
+        <h2>{{ publication.title }}</h2>
+      </div>
+      <div class="body-text">
+        <p>
+          Pas de commentaire pour le moment ! Ajoutez-en un pour lancer la
+          conversation.
+        </p>
+      </div>
+
       <div class="user-info">
-        <h3>{{ publication.author.name }}</h3>
-        <p>{{ publication.author.numberFolower }}</p>
-      </div>
-      <div class="button-folow">
-        <button>S'abonner</button>
-      </div>
-      }
-    </div>
-
-    <div class="body-commentaire">
-      <h2>Commentairs</h2>
-      <p>Site static donc aucun commentaire merci !</p>
-    </div>
-
-    <div class="footer-commentaire">
-      <div class="footer-header">
-        <div class="footer-title">
-          <h2>Qu'en pensez vous ?</h2>
+        <div class="info">
+          <i class="fa-solid fa-user"></i>
+          <div class="info-text">
+            <p>{{ publication.author.name }}</p>
+            <p>{{ publication.author.numberFolower }} <span>abonnés</span></p>
+          </div>
         </div>
-        <div class="avis-publication">
-          <p><span>0</span></p>
+        <button class="btn-folow">S'abonner</button>
+      </div>
+    </div>
+
+    <div class="commentaire-footer">
+      <div class="footer-header">
+        <h2>Qu'en pensez vous ?</h2>
+        <div class="like">
+          <p>❤️<span>0</span></p>
           <i class="fa-regular fa-heart"></i>
         </div>
       </div>
 
       <div class="footer-body">
-        <div class="user-img">
-          <img src="" alt="" />
-        </div>
-        <div class="user-input-add-comment">
-          <input type="text" placeholder="Ajouter un commentaire" />
-        </div>
+        <i class="fa-solid fa-user"></i>
+        <input type="text" placeholder="Ajouter un commentaire !" />
       </div>
     </div>
   </div>

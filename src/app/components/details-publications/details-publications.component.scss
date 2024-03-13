@@ -1,0 +1,191 @@
+#detail-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  margin-top: 80px;
+  border-radius: 30px;
+  background-color: white;
+  filter: drop-shadow(0 0 0.85rem rgb(229, 222, 222));
+
+  .detail-img {
+    img {
+      height: 600px;
+      width: auto;
+      border-top-left-radius: 30px;
+      border-bottom-left-radius: 30px;
+    }
+  }
+
+  .detail-commentaire {
+    margin-left: 115px;
+    padding: 5px;
+
+    .commentaire-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px;
+      margin-top: 20px;
+
+      .header-icon {
+        padding: 12px;
+        :first-child {
+          margin-right: 20px;
+          font-size: 22px;
+          cursor: pointer;
+        }
+
+        :last-child {
+          margin-right: 20px;
+          font-size: 22px;
+          cursor: pointer;
+        }
+      }
+
+      .commentaire-button {
+        display: flex;
+        gap: 40px;
+
+        :first-child {
+          background-color: white;
+          border: none;
+          font-weight: 600;
+          font-size: 15px;
+        }
+
+        :last-child {
+          padding: 10px 15px;
+          background-color: red;
+          color: white;
+          border: none;
+          border-radius: 40px;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .commentaire-body {
+      margin-top: 80px;
+      padding: 10px;
+
+      .body-title {
+        h2 {
+          font-weight: 600;
+          font-size: 18px;
+        }
+      }
+
+      .body-text {
+        p {
+          color: #767676;
+        }
+      }
+
+      .user-info {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        justify-content: space-between;
+        margin-top: 30px;
+
+        .info {
+          display: flex;
+          align-items: center;
+
+          .fa-solid.fa-user {
+            padding: 15px;
+            border-radius: 50%;
+            background-color: rgb(237, 237, 227);
+          }
+
+          .info-text {
+            margin-left: 20px;
+            p {
+              line-height: 2.5px;
+            }
+          }
+        }
+
+        .btn-folow {
+          padding: 10px 15px;
+          background-color: rgb(216, 216, 208);
+          color: black;
+          border: none;
+          border-radius: 40px;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .commentaire-footer {
+      margin-top: 70px;
+      border-top: 1px solid rgb(239, 239, 239);
+      border-bottom-right-radius: 32px;
+      border-bottom-left-radius: 32px;
+
+      .footer-header,
+      .like {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .footer-header {
+        height: 44px;
+        margin: 10px;
+
+        h2 {
+          font-size: 20px;
+          font-weight: 600;
+        }
+        .like {
+          gap: 20px;
+          p,
+          i {
+            cursor: pointer;
+            height: 19px;
+          }
+
+          i {
+            display: flex;
+            min-height: 48px;
+            min-width: 48px;
+            background-color: rgb(237, 237, 227);
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            border-radius: 50%;
+            margin: 5px;
+          }
+        }
+      }
+
+      .footer-body {
+        margin: 5px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .fa-solid.fa-user {
+          background-color: rgb(237, 237, 227);
+          padding: 15px;
+          border-radius: 50%;
+        }
+
+        input {
+          cursor: pointer;
+          padding-bottom: 15px;
+          padding-left: 1px;
+          padding-top: 15px;
+          border-radius: 30px;
+          border-color: rgb(237, 237, 227);
+          background-color: white;
+          padding-left: 20px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
