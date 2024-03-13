@@ -1,11 +1,12 @@
 import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
+import { DownloadImageDirective } from '../../directive/download-image.directive';
 import { PiterestPublication } from '../../model/pinterest-publication.model';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [DownloadImageDirective],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })

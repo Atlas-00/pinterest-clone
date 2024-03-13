@@ -4,11 +4,12 @@ import {
   PiterestPublication,
   TypePiterestPublication,
 } from '../../model/pinterest-publication.model';
+import { DownloadImageDirective } from '../../directive/download-image.directive';
 
 @Component({
   selector: 'app-details-publications',
   standalone: true,
-  imports: [],
+  imports: [DownloadImageDirective],
   templateUrl: './details-publications.component.html',
   styleUrl: './details-publications.component.scss',
 })
