@@ -1,7 +1,8 @@
-import { Component, inject } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { DownloadImageDirective } from '../../directive/download-image.directive';
-import { PiterestPublication } from '../../model/pinterest-publication.model';
+import { PinterestPublication } from '../../model/pinterest-publication.model';
+import { DataService } from '../../service/data.service';
 
 @Component({
   selector: 'app-home',
@@ -10,10 +11,18 @@ import { PiterestPublication } from '../../model/pinterest-publication.model';
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
-export class HomeComponent {
-  mediaData = [...PiterestPublication];
+export class HomeComponent implements OnInit {
+  mediaData = [...PinterestPublication];
+  input!: string;
+  listResultOfSearch!: any;
 
-  router = inject(Router);
+  constructor(private data: DataService, private router: Router) {}
+
+  ngOnInit() {
+    this.listResultOfSearch = this.data.currentInputValue.subscribe(
+      (inputValue: string) => (this.input = inputValue)
+    );
+  }
 
   getDetails(idPublication: number) {
     this.router.navigate(['detail-publication', idPublication]);

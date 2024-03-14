@@ -11,9 +11,10 @@ export class DownloadImageDirective {
 
   @HostListener('click') onClick() {
     const link = document.createElement('a');
-    link.href = this.imageUrl;
     link.download = 'image.jpg';
-
+    link.href = this.imageUrl;
+    document.body.appendChild(link);
+    
     link.click();
   }
 }

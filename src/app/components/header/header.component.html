@@ -10,13 +10,19 @@
       </div>
 
       <div class="button-add">
-        <button>Créer</button>
+        <button (click)="fakeButton()">Créer</button>
       </div>
     </div>
 
     <div class="header-input-search">
       <i class="fa-solid fa-magnifying-glass" id="icon-search"></i>
-      <input type="text" id="search-input" placeholder="Recherche" />
+      <input
+        type="text"
+        id="search-input"
+        [(ngModel)]="inputValue"
+        (keyup)="searchValue()"
+        placeholder="Recherche"
+      />
     </div>
 
     <div class="icon-container">

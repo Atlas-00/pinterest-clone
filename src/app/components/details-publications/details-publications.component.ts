@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { DownloadImageDirective } from '../../directive/download-image.directive';
 import {
-  PiterestPublication,
+  PinterestPublication,
   TypePiterestPublication,
 } from '../../model/pinterest-publication.model';
-import { DownloadImageDirective } from '../../directive/download-image.directive';
 
 @Component({
   selector: 'app-details-publications',
@@ -15,7 +15,7 @@ import { DownloadImageDirective } from '../../directive/download-image.directive
 })
 export class DetailsPublicationsComponent implements OnInit {
   id!: number;
-  listPublications: TypePiterestPublication[] = PiterestPublication;
+  listPublications: TypePiterestPublication[] = PinterestPublication;
   publication!: TypePiterestPublication;
 
   constructor(private route: ActivatedRoute) {}
@@ -31,7 +31,6 @@ export class DetailsPublicationsComponent implements OnInit {
 
       if (publication) {
         this.publication = publication;
-        console.log(publication);
       }
     }
   }
