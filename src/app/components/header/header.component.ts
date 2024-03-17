@@ -15,10 +15,6 @@ export class HeaderComponent {
 
   constructor(private dataService: DataService) {}
 
-  updateValue() {
-    this.dataService.changeInputValue(this.inputValue);
-  }
-
   fakeButton() {
     alert(
       "Il s'agit d'un clone fictif de pinterest cette action est impossible !"
@@ -26,6 +22,11 @@ export class HeaderComponent {
   }
 
   searchValue() {
-    return this.dataService.searchInput(this.inputValue);
+    this.dataService.dataSearch = this.inputValue;
+  }
+
+  onSearch() {
+    this.searchValue();
+    this.dataService.searchInput();
   }
 }

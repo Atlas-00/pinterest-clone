@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
 import {
   PinterestPublication,
   TypePiterestPublication,
@@ -10,21 +9,18 @@ import {
 })
 export class DataService {
   private listPublication: TypePiterestPublication[] = PinterestPublication;
-  private resultSearch!: TypePiterestPublication | TypePiterestPublication[];
+  resultSearch!: TypePiterestPublication[];
+  dataSearch!: string;
 
-  private inputValueSource = new BehaviorSubject('');
-  currentInputValue = this.inputValueSource.asObservable();
-
-  changeInputValue(inputValue: string) {
-    this.inputValueSource.next(inputValue);
-  }
-
-  searchInput(inputValue: string) {
+  searchInput() {
     const resultSearch = (this.resultSearch = this.listPublication.filter(
-      (_element) => _element.title.toLowerCase().includes(inputValue)
+      (_element) => _element.title.toLowerCase().includes(this.dataSearch)
     ));
 
-    console.log(resultSearch);
     return resultSearch;
+  }
+
+  shareData() {
+    return [...this.searchInput()];
   }
 }
